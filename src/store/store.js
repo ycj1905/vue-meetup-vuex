@@ -9,6 +9,7 @@ import * as getters from './getters'
 
 Vue.use(Vuex);
 
+// Share the same Namespaces
 export const store = new Vuex.Store({
     state: {
         value: 0
