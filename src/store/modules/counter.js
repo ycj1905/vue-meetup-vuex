@@ -14,28 +14,51 @@ const getters = {
 };
 
 const mutations = {
-    increment: (state, payload) => {
+    // increment: (state, payload) => {
+    //     state.counter += payload;
+    // },
+    // decrement: (state, payload) => {
+    //     state.counter -= payload;
+    // },
+    [types.MUTATE_DECREMENT_COUNTER]: (state, payload) => {
         state.counter += payload;
     },
-    decrement: (state, payload) => {
+    [types.MUTATE_DECREMENT_COUNTER]: (state, payload) => {
         state.counter -= payload;
     },
 };
 
 const actions = {
-    increment: (context, payload) => {
+    // increment: (context, payload) => {
+    //     context.commit('increment', payload);
+    // },
+    // decrement: ({ commit }, payload) => {
+    //     commit('decrement', payload);
+    // },
+    // asyncIncrement: ({ commit }, payload) => {
+    //     console.log('asyncIncrement');
+    //     setTimeout(() => {
+    //         commit('increment', payload.by);
+    //     },payload.duration);
+    // },
+    // asyncDecrement: ({ commit }, payload) => {
+    //     setTimeout(() => {
+    //         commit('decrement', payload.by);
+    //     },payload.duration);
+    // }
+    [types.COUNTER_INCREMENT]: (context, payload) => {
         context.commit('increment', payload);
     },
-    decrement: ({ commit }, payload) => {
+    [types.COUNTER_DECREMENT]: ({ commit }, payload) => {
         commit('decrement', payload);
     },
-    asyncIncrement: ({ commit }, payload) => {
+    [types.COUNTER_INCREMENT_ASYNC]: ({ commit }, payload) => {
         console.log('asyncIncrement');
         setTimeout(() => {
             commit('increment', payload.by);
         },payload.duration);
     },
-    asyncDecrement: ({ commit }, payload) => {
+    [types.COUNTER_DECREMENT_ASYNC]: ({ commit }, payload) => {
         setTimeout(() => {
             commit('decrement', payload.by);
         },payload.duration);

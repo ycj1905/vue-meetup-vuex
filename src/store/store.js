@@ -3,9 +3,13 @@ import Vuex from 'vuex';
 import counter from './modules/counter'
 
 // create an object which can acces with the name actions
-import * as actions from './actions'
-import * as mutations from './mutations'
-import * as getters from './getters'
+// import * as actions from './actions'
+// import * as mutations from './mutations'
+// import * as getters from './getters'
+
+import actions from './actions'
+import mutations from './mutations'
+import getters from './getters'
 
 Vue.use(Vuex);
 
